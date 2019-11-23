@@ -14,5 +14,5 @@ RUN { \
 
 RUN apk add --no-cache git rsync ansible
 
-ENTRYPOINT [ "/bin/sh" ]
+ENTRYPOINT [ "ansible-playbook" ]
 
