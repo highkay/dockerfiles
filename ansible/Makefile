@@ -6,3 +6,6 @@ build:
 
 upload:
 	docker push highkay/${img}:${tag}
+
+test:
+	docker run -it --rm highkay/${img}:${tag} /bin/sh
