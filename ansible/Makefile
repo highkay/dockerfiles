@@ -1,5 +1,5 @@
 img=ansible
-tag=2.8.6
+tag=2.8.9
 
 build:
 	docker build -t highkay/${img}:${tag} .
