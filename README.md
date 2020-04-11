@@ -1,6 +1,8 @@
 # My Dockerfile Repo
 
-- ansilbe:2.8.6
+- ansilbe:2.8.9
+- etcd:3.3.18
+- mkdocs
 - rapipdf
 
   > translate local swagger.json to pdf
