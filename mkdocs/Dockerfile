@@ -9,9 +9,7 @@ RUN { \
 	echo "http://mirrors.aliyun.com/alpine/latest-stable/community"; \
 	} > /etc/apk/repositories
 
-RUN apk add --no-cache git rsync ansible
-
-RUN mkdir -p /workspace
+RUN apk add --no-cache python3 python3-pip rsync && pip install -i https://mirrors.aliyun.com/pypi/simple/ mkdocs mkdocs-material
 
 WORKDIR /workspace
 
