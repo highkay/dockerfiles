@@ -9,7 +9,7 @@ RUN { \
 	echo "http://mirrors.aliyun.com/alpine/latest-stable/community"; \
 	} > /etc/apk/repositories
 
-RUN apk add --no-cache git rsync ansible
+RUN apk add --no-cache git rsync ansible make
 
 RUN mkdir -p /workspace
 

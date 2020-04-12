@@ -1,6 +1,6 @@
 # My Dockerfile Repo
 
-- ansilbe:2.8.9
+- ansilbe:2.9.6
 - etcd:3.3.18
 - mkdocs
 - rapipdf
