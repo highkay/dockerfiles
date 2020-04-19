@@ -15,5 +15,5 @@ RUN mkdir -p /workspace
 
 WORKDIR /workspace
 
-ENTRYPOINT [ "ansible-playbook" ]
+CMD [ "ansible-playbook" ]
 
