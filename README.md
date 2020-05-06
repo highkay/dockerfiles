@@ -2,6 +2,7 @@
 
 - ansilbe:2.9.6
 - etcd:3.3.18
+- git-secrets
 - mkdocs
 - rapipdf
 
