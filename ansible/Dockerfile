@@ -1,19 +1,19 @@
-FROM alpine:latest
+FROM python:3.8-buster
 
-USER root
+# RUN sed -i s@/archive.ubuntu.com/@/mirrors.aliyun.com/@g /etc/apt/sources.list && \
+# 	apt-get update && \
+# 	apt-get install -y software-properties-common && \
+# 	apt-add-repository --yes --update ppa:ansible/ansible && \
+# 	apt-get install -y ansible git rsync make sshpass && \
+# 	rm -rf /var/lib/apt/lists/*
 
-# backup the orign repo and use aliyun mirror instead
-RUN mv /etc/apk/repositories /etc/apk/repositories.bak
-RUN { \
-	echo "http://mirrors.aliyun.com/alpine/latest-stable/main"; \
-	echo "http://mirrors.aliyun.com/alpine/latest-stable/community"; \
-	} > /etc/apk/repositories
-
-RUN apk add --no-cache git rsync ansible make
+RUN pip install -i https://pypi.tuna.tsinghua.edu.cn/simple ansible 
 
 RUN mkdir -p /workspace
 
 WORKDIR /workspace
+
+RUN apt-get update && apt-get install -y sshpass
 
 CMD [ "ansible-playbook" ]
 
