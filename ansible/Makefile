@@ -20,7 +20,6 @@ verify:
 	certutil -hashfile ansible_${tag}.tar sha256
 
 testrun:
-# scp ./AICSO_INSTALL_2.9_simple.tar.gz root@10.20.156.210:/data/
 	${ANSIBLE_RUN} ansible-playbook -vv -i inventory test_playbook.yml
 
 ping:
